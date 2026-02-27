@@ -17,10 +17,7 @@ graph TD
     G -->|Tensors to Numpy| H(Memory Concat)
     H --> I((final_story.wav))
 
-    classDef agent fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef model fill:#bbf,stroke:#333,stroke-width:2px;
-    class B,D agent;
-    class C,F model;
+
 ```
 
 1. **Emotion Detection (`EmotionDetector`)**:
@@ -64,3 +61,18 @@ python main.py
 Your emotionally-blended, full narrative audio will be synthesized and saved along with any intermediate steps in the `output/` directory.
 
 > **Note:** A sample output (`final_story.wav`) from the default `text` prompt can be found in the `output/` folder.
+## Model References
+
+This project uses the following open-source models:
+
+### Emotion Classification
+
+- **DistilRoBERTa Emotion Model**  
+  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
+
+### Text-to-Speech
+
+- **Qwen3-TTS**  
+  https://github.com/QwenLM/Qwen3-TTS
+
+Please refer to the respective repositories for licensing and model documentation.
